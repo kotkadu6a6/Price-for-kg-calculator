@@ -48,7 +48,7 @@ namespace PriceForKgGUI
                 {
                     MessageBox.Show("Please select measurment unit","Error",MessageBoxButtons.OK);
                 }
-                LblResult.Text =Convert.ToString(Math.Round(result,2));
+                LblResult.Text = result.ToString("0.00 lev");
             }
             else
             {
