@@ -32,7 +32,7 @@ namespace PriceForKgGUI
         {
             price = Convert.ToDouble(TxtPrice.Text);
             amount = Convert.ToDouble(TxtAmount.Text);
-            if (price > 0 || amount > 0)
+            if (price > 0 && amount > 0)
             {
                 if (BtnGram.Checked)
                 {
@@ -43,12 +43,16 @@ namespace PriceForKgGUI
                 {
                     amountMultiplyer = amount;
                     result = amountMultiplyer * price;
-                }               
+                }
+                else
+                {
+                    MessageBox.Show("Please select measurment unit","Error",MessageBoxButtons.OK);
+                }
                 LblResult.Text =Convert.ToString(Math.Round(result,2));
             }
             else
             {
-                LblResult.Text = "ENTER VALID NUMBERS";
+                MessageBox.Show("Enter valid numbers", "Error", MessageBoxButtons.OK);
             }
 
         }
