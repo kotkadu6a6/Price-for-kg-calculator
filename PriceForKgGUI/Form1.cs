@@ -24,7 +24,7 @@ namespace PriceForKgGUI
 
             price2 = Convert.ToDouble(TxtPrice2.Text);
             amount2 = Convert.ToDouble(TxtAmount2.Text);
-            if (price2 > 0 && amount2 > 0)
+            if ((price2 > 0 && amount2 > 0)&&(BtnGram2.Checked||BtnKilo2.Checked))
             {
                 if (BtnGram2.Checked)
                 {
@@ -62,7 +62,7 @@ namespace PriceForKgGUI
         {
             price = Convert.ToDouble(TxtPrice.Text);
             amount = Convert.ToDouble(TxtAmount.Text);
-            if (price > 0 && amount > 0)
+            if ((price > 0 && amount > 0) && (BtnGram.Checked || BtnKilo.Checked))
             {
                 if (BtnGram.Checked)
                 {
